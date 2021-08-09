@@ -1,0 +1,6 @@
+R{"rounds"}=? [ F "deadlock" ] 
+
+filter(print, "deadlock")
+
+S=? [m1=1 & m2=2 & m3=3]
+
