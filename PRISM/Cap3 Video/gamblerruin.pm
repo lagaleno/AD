@@ -14,12 +14,17 @@ module gamblersRuin
 	s:[0..6] init 2;
 	
 	//matriz de transição
-	[ruina] s=0 -> (s'=0);
-	[k1] s=1 -> q : (s'=0) + p : (s'=2);
-	[k2] s=2 -> q : (s'=1) + p : (s'=3);
-	[k3] s=3 -> q : (s'=2) + p : (s'=4); 
-	[k4] s=4 -> q : (s'=3) + p : (s'=5);
-	[k5] s=5 -> q : (s'=4) + p : (s'=6);
-	[fortuna] s=6 -> (s'=6);
+	[] s=0 -> (s'=0);
+	[] s=1 -> q : (s'=0) + p : (s'=2);
+	[] s=2 -> q : (s'=1) + p : (s'=3);
+	[] s=3 -> q : (s'=2) + p : (s'=4); 
+	[] s=4 -> q : (s'=3) + p : (s'=5);
+	[] s=5 -> q : (s'=4) + p : (s'=6);
+	[] s=6 -> (s'=6);
 
 endmodule
+
+rewards "time"
+
+	true : 1;
+endrewards
