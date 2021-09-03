@@ -1,6 +1,6 @@
 dtmc
 
-// Para a questão:
+// Para a questï¿½o:
 // k = 2;
 // p 1/3, logo q = 2/3;
 // n = 6;
@@ -13,7 +13,7 @@ module gamblersRuin
 	// estados que indicam quantidade de dinheiro
 	s:[0..6] init 2;
 	
-	//matriz de transição
+	//matriz de transiï¿½ï¿½o
 	[] s=0 -> (s'=0);
 	[] s=1 -> q : (s'=0) + p : (s'=2);
 	[] s=2 -> q : (s'=1) + p : (s'=3);
@@ -23,8 +23,3 @@ module gamblersRuin
 	[] s=6 -> (s'=6);
 
 endmodule
-
-rewards "time"
-
-	true : 1;
-endrewards
